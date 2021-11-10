@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="style/responsive.css">
+
+    
+    
+    <title>Netflix Clone</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2 class="logo">NETFLIX</h2>
+            </h2>
+            <nav>
+                <a href="#">inicio</a>
+                <a href="#">Séries</a>
+                <a href="#">Filmes</a>
+                <a href="#">Documentários</a>
+            </nav>
+        </div>
+    </header>
+    <script>
+    function Mudarestado(el) {
+        var display = document.getElementById(el).style.display;
+        if(display == "none")
+            document.getElementById(el).style.display = 'flex';
+        else
+            document.getElementById(el).style.display = 'none';
+    }
+    </script>
+
+    <script>
+      // Load the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/player_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+      // Replace the 'ytplayer' element with an <iframe> and
+      // YouTube player after the API code downloads.
+      var player;
+      function onYouTubePlayerAPIReady() {
+        player = new YT.Player('ytplayer', {
+          height: '90%',
+          width: '90%',
+          videoId: 'Dsyk5w4qOkM'
+        });
+      }
+    </script>
+    <div id="minhaDiv">
+        <div class="fecha">
+        <i onclick="Mudarestado('minhaDiv')" class="fas fa-times-circle"></i>
+        </div>
+        <div id="ytplayer"></div>
+    </div>
+    <main>
+        <div class="filme-principal">
+            <div class="container">
+                <h3 class="titulo">HOUSE OF CARD</h3>
+                <p class="descricao">Decididos a pôr um fim no casamento assassinando um ao outro, um casal se dirige a uma cabana remota, mas logo precisam enfrentar uma ameaça ainda maior.</p>
+                    <button role="button" onclick="Mudarestado('minhaDiv')" class="botao">
+                        <i class="fas fa-play"></i>
+                        ASSISTIR AGORA
+                    </button>
+                    <button role="button" class="botao">
+                        <i class="fas fa-info"></i>
+                        MAIS INFORMAÇÔES
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <div class="carosel-filmes">
+        <div class="owl-carousel owl-theme">
+            <img src="img/1.jpg" alt="" class="box-filmes">
+            <img src="img/2.jpg" alt="" class="box-filmes">
+            <img src="img/3.jpg" alt="" class="box-filmes">
+            <img src="img/4.jpg" alt="" class="box-filmes">
+            <img src="img/5.jpg" alt="" class="box-filmes">
+            <img src="img/6.jpg" alt="" class="box-filmes">
+            <img src="img/7.jpg" alt="" class="box-filmes">
+            <img src="img/8.jpg" alt="" class="box-filmes">
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/d5434f4db2.js" crossorigin="anonymous"></script>
+    <script src="js/owl/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="js/owl/owl.carousel.min.js" crossorigin="anonymous"></script>
+    <script src="js/owl/index.js" crossorigin="anonymous"></script>
+</body>
+</html>
